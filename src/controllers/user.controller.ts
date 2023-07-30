@@ -40,7 +40,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
     const user = await User.findOne({ email: email });
     if (!user) {
       throw new AppError({
-        statusCode: statusCodes.NOT_FOUND,
+        statusCode: statusCodes.BAD_REQUEST,
         message: "User not found.",
       });
     }
@@ -48,7 +48,7 @@ const login = async (req: Request, res: Response, next: NextFunction) => {
     const isValidPassword = comparePasswords(user.password, password);
     if (!isValidPassword) {
       throw new AppError({
-        statusCode: statusCodes.UNAUTHORIZED,
+        statusCode: statusCodes.BAD_REQUEST,
         message: "Invalid password.",
       });
     }
@@ -119,7 +119,7 @@ const updateUser = async (req: Request, res: Response, next: NextFunction) => {
     const existingUser = await User.findOne({ id: userId });
     if (!existingUser) {
       throw new AppError({
-        statusCode: statusCodes.BAD_REQUEST,
+        statusCode: statusCodes.NOT_FOUND,
         message: "User does not exist.",
       });
     }
