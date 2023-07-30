@@ -54,6 +54,27 @@ npm run dev
 
 The API should now be accessible at `http://localhost:8080/`.
 
+
+## Running the Application on Docker
+
+1. Make sure you have `Docker` and `docker-compose` installed and running on your system.
+
+2. Create a `.env` file in the root directory of the project following (see .env_template for refernce).
+
+3. Build the Docker container for the application:
+
+```bash
+docker-compose build
+```
+
+4. Run the Docker container:
+
+```bash
+docker-compose up
+```
+
+The API should now be accessible at `http://localhost:8080/`.
+
 ## Testing the API
 
 To run the automated tests, use:
