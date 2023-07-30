@@ -5,6 +5,7 @@ export type User = {
   password?: string;
 };
 
+// Type used when searching for a user on data store with a given attribute
 export type FindUserConditions = {
   id?: string;
   name?: string;

@@ -5,6 +5,9 @@ import { statusCodes } from "../utils";
 import AppError from "../AppError";
 import config from "../config";
 
+/**
+ * Middleware to check if the user is authenticated.
+ */
 const userAuthentication = (
   req: Request,
   res: Response,

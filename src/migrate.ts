@@ -10,6 +10,7 @@ async function runMigrations() {
     const migrationsDir = path.join(root, "migrations");
     const migrationFiles = fs.readdirSync(migrationsDir).sort();
 
+    //Iterate over the files and excute them
     for (const migrationFile of migrationFiles) {
       const filePath = path.join(migrationsDir, migrationFile);
       const migrationSql = fs.readFileSync(filePath, "utf8");

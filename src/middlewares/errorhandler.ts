@@ -11,7 +11,7 @@ const errorHandler = (
       error: err.message,
     });
   } else {
-    // Login could be useful here to check critical errors.
+    // Logging could be useful here to check critical errors.
     console.error("ERROR 💥", err);
     res.status(500).json({
       status: "error",

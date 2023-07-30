@@ -6,6 +6,7 @@ import { userRoutes, authenticationRoutes } from "./routes/v1";
 import { User } from "./models";
 import { errorHandler } from "./middlewares";
 
+// Make user information accessible request life cycle
 declare global {
   namespace Express {
     interface Request {
@@ -13,6 +14,7 @@ declare global {
     }
   }
 }
+
 const PORT = process.env.PORT || 8080;
 const API_VERSION = 1;
 const app = express();
