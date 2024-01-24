@@ -142,7 +142,7 @@ This will execute the test under `tests` folder.
   - 404 Not Found: If the user with the specified ID does not exist.
   - 500 Internal Server Error: If there was an issue deleting the user.
 
-### 5. `POST /api/v1/register`
+### 5. `POST /api/v1/auth/register`
 
 - Description: Registers a new user.
 - Request Body: Provide the user registration data in JSON format.
@@ -151,7 +151,7 @@ This will execute the test under `tests` folder.
   - 400 Bad Request: If the request body does not follow the validation schema or user already exists.
   - 500 Internal Server Error: If there was an issue registering the user.
 
-### 6. `POST /api/v1/login`
+### 6. `POST /api/v1/auth/login`
 
 - Description: Authenticates a user and returns a JWT token.
 - Request Body: Provide the user login credentials (email and password) in JSON format.
